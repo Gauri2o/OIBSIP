@@ -1,129 +1,251 @@
-# 🎙️ Advanced Python Voice Assistant
+# 🐍 OASIS INFOBYTE – Python Programming Internship
 
-## 📌 OASIS INFOBYTE — Python Programming Internship
+## 📌 Internship Overview
 
-**Task:** Task 1 – Voice Assistant  
-**Track:** Python Programming  
-**Tier:** Advanced  
-**Internship:** OASIS INFOBYTE SIP
+This repository contains the projects completed as part of the **OASIS INFOBYTE Python Programming Internship**.
 
----
-
-## 📖 Project Overview
-
-This project is an advanced Python-based Voice Assistant that accepts
-spoken commands through a microphone and responds using text-to-speech.
-
-The assistant can perform several useful tasks such as telling the
-current time and date, searching the web, providing weather information,
-answering general knowledge questions, setting reminders, and executing
-user-defined custom commands.
-
-The project demonstrates speech recognition, natural language intent
-detection, API integration, text-to-speech, JSON-based configuration,
-and error handling in Python.
+The internship focused on developing practical Python applications and applying programming concepts such as GUI development, API integration, database management, validation, automation, and secure programming.
 
 ---
 
-## ✨ Features
+## 📚 Completed Tasks
 
-### 🎤 Voice Interaction
+| Task       | Project                             | Description                                                                                                                                 |
+| ---------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Task 1** | 🎙️ Voice Assistant                 | Advanced Python voice assistant with weather, web search, reminders, date/time, and knowledge-based commands                                |
+| **Task 2** | ⚖️ BMI Calculator                   | BMI calculation application with category classification, calculation history, SQLite storage, and BMI trend visualization                  |
+| **Task 3** | 🔐 Secure Random Password Generator | Cryptographically secure password generator with customizable character options, strength detection, clipboard support, and session history |
 
-- Captures commands using a microphone.
-- Converts speech into text using SpeechRecognition.
-- Provides spoken responses using pyttsx3.
+---
 
-### 👋 Greeting
+# 🎙️ Task 1 – Voice Assistant
 
-The assistant responds to commands such as:
+### Project Overview
 
-> Hello
+An advanced desktop voice assistant developed using Python.
 
-with a predefined greeting.
+The assistant accepts voice commands, identifies the requested intent, performs the required operation, and provides a voice response.
 
-### 🕐 Time and Date
+### Key Features
 
-The assistant can provide:
+* 🎙️ Voice command recognition
+* 🔊 Text-to-speech responses
+* 🕐 Time and date
+* 🌦️ Weather information
+* 🌐 Web search
+* ⏰ Reminders
+* 🧠 Knowledge-based queries
+* 📋 Intent detection
+* 🔐 API configuration
+* 🛡️ Error handling
 
-- Current time
-- Current date
-- Current day
+### Technologies
 
-Example:
+* Python
+* SpeechRecognition
+* pyttsx3
+* Requests
+* PyAudio
+* OpenWeather API
 
-> What is the time?
+### Project
 
-> What is today's date?
+[Open Task 1 – Voice Assistant](Python-Task1-VoiceAssistant/)
 
-### 🌐 Web Search
+---
 
-The assistant can perform Google searches using voice commands.
+# ⚖️ Task 2 – BMI Calculator
 
-Example:
+### Project Overview
 
-> Search Python programming
+An interactive BMI Calculator developed using Python.
 
-The corresponding search is opened automatically in the web browser.
+The application calculates Body Mass Index from the user's height and weight, classifies the result into standard BMI categories, stores previous calculations, and displays BMI trends.
 
-### 🌦️ Live Weather
+### Key Features
 
-The assistant uses the OpenWeatherMap API to provide:
+* ⚖️ BMI calculation
+* 📊 BMI category classification
+* 🗃️ Calculation history
+* 💾 SQLite database
+* 📈 BMI trend visualization
+* 🧪 Input validation
+* 🖥️ User-friendly interface
 
-- City name
-- Temperature in Celsius
-- Temperature in Fahrenheit
-- Humidity
-- Weather condition
-- Wind speed
+### BMI Categories
 
-Example:
+| BMI Range      | Category      |
+| -------------- | ------------- |
+| Below 18.5     | Underweight   |
+| 18.5 – 24.9    | Normal Weight |
+| 25.0 – 29.9    | Overweight    |
+| 30.0 and above | Obesity       |
 
-> What's the weather in Allahabad?
+> BMI is a general screening measure and is not a medical diagnosis.
 
-### ⏰ Timed Reminders
+### Technologies
 
-Users can set reminders using voice commands.
+* Python
+* Tkinter
+* SQLite
+* Matplotlib
 
-Example:
+### Project
 
-> Remind me after 10 seconds
+[Open Task 2 – BMI Calculator](Python-Task2-BMICalculator/)
 
-After the specified duration, the assistant gives an audible reminder.
+---
 
-### 🧠 Knowledge Base
+# 🔐 Task 3 – Secure Random Password Generator
 
-The assistant contains a local knowledge base for answering
-general questions related to topics such as:
+### Project Overview
 
-- Python
-- Java
-- JavaScript
-- Artificial Intelligence
-- Machine Learning
-- Computer Science
-- OpenCV
-- MediaPipe
-- SQL
-- Databases
-- General knowledge
+A secure password generator developed using Python and Tkinter.
 
-Example:
+The application uses Python's `secrets` module to generate cryptographically secure passwords based on user-selected requirements.
 
-> What is Python programming?
+### Key Features
 
-The answer is provided both in the terminal and through voice.
+* 🔐 Secure password generation
+* 📏 Adjustable password length
+* 🔠 Uppercase letters
+* 🔡 Lowercase letters
+* 🔢 Numbers
+* 🔣 Symbols
+* 🚫 Ambiguous character exclusion
+* 💪 Password strength indicator
+* 📋 Copy to clipboard
+* 🕒 Last 5 generated passwords during the current session
+* 🧪 Input validation
+* 🔒 No permanent password history storage
 
-### ⚙️ Custom Commands
+### Technologies
 
-Users can add their own commands through `config.json`.
+* Python
+* Tkinter
+* secrets
+* string
+* pyperclip
 
-Example:
+### Project
 
-```json
-{
-    "custom_commands": {
-        "open youtube": "https://www.youtube.com",
-        "open github": "https://github.com",
-        "open linkedin": "https://www.linkedin.com"
-    }
-}
+[Open Task 3 – Secure Password Generator](Python-Task3-RandomPasswordGenerator/)
+
+---
+
+# 📁 Repository Structure
+
+```text
+OIBSIP/
+│
+├── Python-Task1-VoiceAssistant/
+│   ├── screenshots/
+│   ├── .gitignore
+│   ├── config.json
+│   ├── main.py
+│   ├── requirements.txt
+│   └── README.md
+│
+├── Python-Task2-BMICalculator/
+│   ├── screenshots/
+│   ├── .gitignore
+│   ├── bmi.db
+│   ├── main.py
+│   ├── requirements.txt
+│   └── README.md
+│
+├── Python-Task3-RandomPasswordGenerator/
+│   ├── screenshots/
+│   ├── .gitignore
+│   ├── main.py
+│   ├── requirements.txt
+│   └── README.md
+│
+└── README.md
+```
+
+---
+
+# 🛠️ General Technologies
+
+The projects in this repository use a combination of:
+
+* Python 3.11+
+* Tkinter
+* SQLite
+* Matplotlib
+* SpeechRecognition
+* pyttsx3
+* Requests
+* PyAudio
+* secrets
+* pyperclip
+* REST APIs
+
+---
+
+# ⚙️ Running the Projects
+
+Each task is maintained as a separate project with its own dependencies and README.
+
+Navigate to the required task folder and follow the installation instructions provided in its README.
+
+For example:
+
+```bash
+cd Python-Task1-VoiceAssistant
+```
+
+or:
+
+```bash
+cd Python-Task2-BMICalculator
+```
+
+or:
+
+```bash
+cd Python-Task3-RandomPasswordGenerator
+```
+
+---
+
+# 🔐 Security Practices
+
+The projects follow basic security practices where applicable.
+
+* Sensitive API credentials should not be committed to GitHub.
+* Virtual environments are excluded using `.gitignore`.
+* Python cache files are excluded from version control.
+* The password generator uses Python's `secrets` module for security-sensitive random generation.
+* Password history in Task 3 is maintained only during the current application session.
+
+---
+
+# 📸 Project Screenshots
+
+Screenshots demonstrating the functionality of each project are available inside their respective `screenshots` folders.
+
+* Task 1 → Voice Assistant screenshots
+* Task 2 → BMI Calculator screenshots
+* Task 3 → Password Generator screenshots
+
+---
+
+# 🎯 Internship Details
+
+**Organization:** OASIS INFOBYTE
+
+**Track:** Python Programming
+
+**Internship:** OASIS INFOBYTE Python Programming Internship
+
+**Completed Tasks:** 3
+
+---
+
+# 👩‍💻 Author
+
+**Gauri Srivastava**
+
+B.Tech – Computer Science and Engineering
