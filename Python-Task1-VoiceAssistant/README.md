@@ -1,129 +1,315 @@
-# 🎙️ Advanced Python Voice Assistant
+# 🎙️ Advanced Voice Assistant – OASIS INFOBYTE
 
-## 📌 OASIS INFOBYTE — Python Programming Internship
+## Task
 
-**Task:** Task 1 – Voice Assistant  
-**Track:** Python Programming  
-**Tier:** Advanced  
-**Internship:** OASIS INFOBYTE SIP
+Python Programming – Task 1
 
----
+## Project Overview
 
-## 📖 Project Overview
+This project is an advanced voice assistant developed using Python.
 
-This project is an advanced Python-based Voice Assistant that accepts
-spoken commands through a microphone and responds using text-to-speech.
+The assistant accepts voice commands from the user, converts speech into text, identifies the user's intent, performs the requested task, and responds using voice output.
 
-The assistant can perform several useful tasks such as telling the
-current time and date, searching the web, providing weather information,
-answering general knowledge questions, setting reminders, and executing
-user-defined custom commands.
-
-The project demonstrates speech recognition, natural language intent
-detection, API integration, text-to-speech, JSON-based configuration,
-and error handling in Python.
+The application is designed as a practical desktop voice assistant with features such as web search, weather information, date and time, reminders, and general knowledge queries.
 
 ---
 
 ## ✨ Features
 
-### 🎤 Voice Interaction
+- 🎙️ Voice command recognition
+- 🔊 Text-to-speech responses
+- 🕐 Current time
+- 📅 Current date
+- 🌐 Web search
+- 🌦️ Weather information
+- ⏰ Reminder functionality
+- 🧠 General knowledge queries
+- 📋 Intent detection
+- 🔐 API key configuration through environment/configuration settings
+- 🖥️ Simple command-line interface
+- ❌ Graceful handling of unknown commands
+- 🔄 Continuous listening until the user exits
 
-- Captures commands using a microphone.
-- Converts speech into text using SpeechRecognition.
-- Provides spoken responses using pyttsx3.
+---
 
-### 👋 Greeting
+## 🛠️ Technologies Used
 
-The assistant responds to commands such as:
+- Python 3.11+
+- SpeechRecognition
+- pyttsx3
+- Requests
+- PyAudio
+- Web browser
+- OpenWeather API
+- Knowledge/web lookup APIs
 
-> Hello
+---
 
-with a predefined greeting.
+## 📁 Project Structure
 
-### 🕐 Time and Date
+```text
+Python-Task1-VoiceAssistant/
+│
+├── screenshots/
+│   ├── assistant-running.png
+│   ├── reminder.png
+│   ├── weather.png
+│   └── web-search.png
+│
+├── .gitignore
+├── main.py
+├── config.json
+├── requirements.txt
+└── README.md
+```
 
-The assistant can provide:
+---
 
-- Current time
-- Current date
-- Current day
+## ⚙️ Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Gauri2o/OIBSIP.git
+```
+
+### 2. Navigate to the Task 1 folder
+
+```bash
+cd OIBSIP/Python-Task1-VoiceAssistant
+```
+
+### 3. Create a virtual environment
+
+```bash
+python -m venv venv
+```
+
+### 4. Activate the virtual environment
+
+Windows PowerShell:
+
+```powershell
+venv\Scripts\Activate.ps1
+```
+
+### 5. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 🔑 Configuration
+
+The weather feature requires an API key from OpenWeather.
+
+The API configuration is stored separately from the main application logic.
+
+Make sure the required API key is configured before using the weather feature.
+
+Do not publish private API keys or other sensitive credentials on GitHub.
+
+---
+
+## ▶️ Run the Application
+
+Start the assistant using:
+
+```bash
+python main.py
+```
+
+The assistant will greet the user and start listening for voice commands.
+
+---
+
+## 🎙️ Supported Commands
+
+### Time
 
 Example:
 
-> What is the time?
+```text
+"What is the time?"
+```
 
-> What is today's date?
+The assistant provides the current time.
 
-### 🌐 Web Search
+---
 
-The assistant can perform Google searches using voice commands.
+### Date
 
 Example:
 
-> Search Python programming
+```text
+"What is today's date?"
+```
 
-The corresponding search is opened automatically in the web browser.
+The assistant provides the current date.
 
-### 🌦️ Live Weather
+---
 
-The assistant uses the OpenWeatherMap API to provide:
+### Weather
 
-- City name
-- Temperature in Celsius
-- Temperature in Fahrenheit
+Example:
+
+```text
+"What's the weather in Allahabad?"
+```
+
+or:
+
+```text
+"Weather in Prayagraj"
+```
+
+The assistant retrieves weather information such as:
+
+- Temperature
 - Humidity
 - Weather condition
 - Wind speed
 
-Example:
+---
 
-> What's the weather in Allahabad?
-
-### ⏰ Timed Reminders
-
-Users can set reminders using voice commands.
+### Web Search
 
 Example:
 
-> Remind me after 10 seconds
+```text
+"Search for Python programming"
+```
 
-After the specified duration, the assistant gives an audible reminder.
+The assistant opens a web search for the requested topic.
 
-### 🧠 Knowledge Base
+---
 
-The assistant contains a local knowledge base for answering
-general questions related to topics such as:
-
-- Python
-- Java
-- JavaScript
-- Artificial Intelligence
-- Machine Learning
-- Computer Science
-- OpenCV
-- MediaPipe
-- SQL
-- Databases
-- General knowledge
+### Knowledge Query
 
 Example:
 
-> What is Python programming?
+```text
+"What is Python programming?"
+```
 
-The answer is provided both in the terminal and through voice.
+The assistant attempts to retrieve information and provide a spoken response.
 
-### ⚙️ Custom Commands
+---
 
-Users can add their own commands through `config.json`.
+### Reminder
 
 Example:
 
-```json
-{
-    "custom_commands": {
-        "open youtube": "https://www.youtube.com",
-        "open github": "https://github.com",
-        "open linkedin": "https://www.linkedin.com"
-    }
-}
+```text
+"Set a reminder"
+```
+
+The assistant can create reminders during the current application session.
+
+---
+
+## 🧠 Intent Detection
+
+The assistant identifies different types of user requests before performing an action.
+
+Supported intent categories include:
+
+- Time
+- Date
+- Weather
+- Web Search
+- Knowledge
+- Reminder
+- Exit
+- Unknown
+
+This allows the assistant to route each voice command to the appropriate functionality.
+
+---
+
+## 🔊 Voice Response
+
+The assistant uses text-to-speech technology to respond to the user.
+
+Instead of displaying only text responses, the application converts the response into speech so that the interaction feels more natural.
+
+---
+
+## 🛡️ Error Handling
+
+The application handles common situations such as:
+
+- Speech not being recognized
+- Unclear voice commands
+- Unknown intents
+- Invalid city names
+- Weather API errors
+- Missing or invalid API keys
+- Network/API failures
+
+When a command cannot be processed, the assistant provides an appropriate response instead of terminating unexpectedly.
+
+---
+
+## 📸 Screenshots
+
+### Assistant Running
+
+![Assistant Running](screenshots/assistant-running.png)
+
+### Reminder
+
+![Reminder](screenshots/reminder.png)
+
+### Weather
+
+![Weather](screenshots/weather.png)
+
+### Web Search
+
+![Web Search](screenshots/web-search.png)
+
+---
+
+## 🔐 Security
+
+Sensitive API credentials should not be hard-coded into the source code.
+
+The `.gitignore` file is used to prevent sensitive and unnecessary files such as virtual environments, cache files, and environment files from being committed to Git.
+
+---
+
+## 🚀 Future Enhancements
+
+Possible future improvements include:
+
+- GUI-based interface
+- More voice commands
+- Offline speech recognition
+- More APIs and services
+- News updates
+- Music control
+- Application launching
+- Improved natural language understanding
+- Persistent reminder management
+- Multi-language voice support
+
+---
+
+## 🎯 Task Details
+
+**Organization:** OASIS INFOBYTE
+
+**Track:** Python Programming
+
+**Task:** Task 1 – Voice Assistant
+
+---
+
+## 👩‍💻 Author
+
+**Gauri Srivastava**
+
+B.Tech – Computer Science and Engineering
